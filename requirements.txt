@@ -1,0 +1,13 @@
+# requirements.txt - Updated without AgentOps
+crewai
+crewai-tools
+langchain
+langchain-community
+langchain-openai
+playwright
+pydantic
+python-dotenv
+asyncio-throttle
+beautifulsoup4
+lxml
+openai

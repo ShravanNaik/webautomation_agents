@@ -11,3 +11,6 @@ asyncio-throttle
 beautifulsoup4
 lxml
 openai
+aiohttp
+requests
+pysqlite3-binary

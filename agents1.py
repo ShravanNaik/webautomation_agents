@@ -1,4 +1,8 @@
-# app.py - Complete Popup & CAPTCHA Handling Automation
+
+import sys
+import importlib
+importlib.import_module('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')# app.py - Complete Popup & CAPTCHA Handling Automation
 import streamlit as st
 import asyncio
 import os
@@ -16,7 +20,7 @@ load_dotenv()
 
 # Configure Streamlit
 st.set_page_config(
-    page_title="🛡️ Complete Smart Automation",
+    page_title="🛡️ Agentic Smart Automation",
     page_icon="🛡️",
     layout="wide"
 )
@@ -60,7 +64,7 @@ class CompleteSmartAutomation:
             
         self.llm = ChatOpenAI(
             model="gpt-4o",
-            temperature=0,
+            temperature=0.5,
             openai_api_key=self.api_key
         )
         
@@ -515,16 +519,16 @@ if 'tool' not in st.session_state:
     st.session_state.tool = CompleteSmartAutomation()
 
 # Main UI
-st.markdown('<h1 class="main-title">🛡️ Complete Smart Automation</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title">🛡️ Agentic Smart Automation</h1>', unsafe_allow_html=True)
 
-# Feature badges
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.markdown('<div class="popup-badge">🚫 Popup Killer</div>', unsafe_allow_html=True)
-with col2:
-    st.markdown('<div class="smart-badge">🤖 CAPTCHA Solver</div>', unsafe_allow_html=True)
-with col3:
-    st.markdown('<div class="popup-badge">🛡️ Full Protection</div>', unsafe_allow_html=True)
+# # Feature badges
+# col1, col2, col3 = st.columns(3)
+# with col1:
+#     st.markdown('<div class="popup-badge">🚫 Popup Killer</div>', unsafe_allow_html=True)
+# with col2:
+#     st.markdown('<div class="smart-badge">🤖 CAPTCHA Solver</div>', unsafe_allow_html=True)
+# with col3:
+#     st.markdown('<div class="popup-badge">🛡️ Full Protection</div>', unsafe_allow_html=True)
 
 st.markdown("### Handles popups, CAPTCHAs, cookie banners - everything automatically!")
 

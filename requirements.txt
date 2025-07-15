@@ -16,3 +16,4 @@ requests
 pysqlite3-binary
 playwright
 psutil
+chromium
